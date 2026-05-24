@@ -151,7 +151,10 @@
   }
   .resultado {
     flex: 1;
-    border: 1px solid;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
   }
   @keyframes surgir {
     from {
@@ -166,6 +169,30 @@
   .animar-entrada {
     animation: surgir 0.5s ease-out; 
     }
+    /*resposta*/
+  .resposta {
+    border: 3px solid lightblue;
+    border-radius: 5px;
+    height: 50%;
+    width: 100%;
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  h3 {
+   font-weight: 200;
+   font-size: 1.5em; 
+  }
+  h4 {
+    color: var(--secundario);
+    font-weight: 800;
+    font-size: 3.5em;
+  }
+  .desc {
+   font-size: 1.5em;
+  }
 </style>
 <body>
   <div class="tudo">
@@ -214,8 +241,11 @@
     </main>
 
     <section class="resultado">
-      <p>resultado</p>
-      <h3></h3>
+      <div class="resposta" id="resposta">
+        <h3></h3>
+        <h4></h4>
+        <p class ="desc" id="desc"></p>
+      </div>
     </section>
   </div>  
   <script src="javascript/menu.js"></script>

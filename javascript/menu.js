@@ -65,7 +65,10 @@ function renderGotejar() {
       </div>`
 }
 
-const resp = document.querySelector('h3')
+let resp = document.querySelector('h4')
+let nome = document.querySelector('h3')
+let desc = document.getElementById('desc')
+const respContainer = document.getElementById('resposta')
 
 container.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -81,7 +84,10 @@ const concentracao_ml = Number(frm_calc.conc_ml.value)
 
 conc_final = concentracao_mg/concentracao_ml
 resultado = dose/conc_final
-  resp.innerText = `Você deve tomar ${resultado.toFixed(2)}`
+resp.innerText = resultado.toFixed(2)
+respContainer.style.display = "flex" 
+desc.innerText = `Você deverá tomar ${resultado.toFixed(2)}`
+nome.innerText = calcMedicamento
 }
 //calc dosagem
 else if (formularioAtivo === 'calc-duração') {
@@ -95,7 +101,10 @@ const caixa = Number(frm_dur.inCaixa.value)
 total_dose = qDia*dur
 total_final = Math.ceil(total_dose/caixa)
 
-resp.innerText = `Você precisará de ${total_final} caixas`
+resp.innerText = total_final
+respContainer.style.display = "flex"
+desc.innerText = `Você precisará de ${total_final} caixas`
+nome.innerText = durMedicamento
 }
 else if (formularioAtivo === 'calc-gotejamento') {
 const frm_gotejamento = document.getElementById('calc-gotejamento')
@@ -104,7 +113,10 @@ const gMedicamento = (frm_gotejamento.gMedicamento.value)
 const bolsa = (frm_gotejamento.inBolsa.value)
 const horas = (frm_gotejamento.inHoras.value)
 
-Gotas = (bolsa/(horas*3))
-resp.innerText = `No total será ${Gotas.toFixed(2)} gotas por minuto`
+Gotas = Math.round(bolsa/(horas*3))
+resp.innerText = Gotas
+respContainer.style.display = "flex"
+desc.innerText = `No total será ${Gotas} gotas por minuto`
+nome.innerText = gMedicamento
 }})
 
