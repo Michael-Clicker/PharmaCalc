@@ -63,7 +63,12 @@ Calcula a velocidade do gotejamento com base na constante de tempo hospitalar (h
 
 ## 💻 Como Rodar o Projeto Localmente
 
-1. Clone o repositório:
+1. Entre pelo link:
+    https://michael-clicker.github.io/PharmaCalc/
+
+   ou
+
+2. Clone o repositório:
    ```bash
    git clone https://github.com/Michael-Clicker/Calculo-faramceutico
    cd Calculo-faramceutico
