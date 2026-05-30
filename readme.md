@@ -9,6 +9,9 @@
 
 O **PharmaCalc** é uma aplicação web interativa desenvolvida para simplificar e automatizar cálculos farmacêuticos cruciais utilizados no dia a dia de profissionais de saúde, farmácias e hospitais. O projeto renderiza de forma dinâmica três módulos de cálculo específicos dentro de uma interface moderna de SPA (Single Page Application).
 
+<img width="1920" height="912" alt="preview_PharmaCalc" src="https://github.com/user-attachments/assets/5e7d3815-b11b-4f89-9fc9-ba75562cdae1" />
+
+
 ---
 
 ## 🚀 Funcionalidades e Módulos
